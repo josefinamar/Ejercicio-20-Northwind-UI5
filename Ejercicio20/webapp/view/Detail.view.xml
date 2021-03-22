@@ -1,0 +1,51 @@
+<mvc:View controllerName="Ejercicio20.Ejercicio20.controller.Detail" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	
+    <Page
+		id="idDetail"
+		title="{i18n>titleDetail}"
+		backgroundDesign= "Solid"
+		class="sapUiStdPage">
+            <customHeader>
+                <Toolbar>
+                    <Button type="Back" press="onNavBack" />
+                    <ToolbarSpacer/>
+                    <Title text="{i18n>titleDetail}" level="H2"/>
+                    <ToolbarSpacer/>        
+                </Toolbar>
+            </customHeader>
+            <content>
+                <f:SimpleForm id="idDetailForm" editable="false" title="{i18n>titleDetailForm}" >
+                    <f:content>
+                        <Label text="{i18n>tableOrderId}" />
+                        <Text text="{ordenSeleccionada>/OrderID}" />
+                        
+                        <Label text="{i18n>detailLabelCustomerID}" />
+                        <Text text="{ordenSeleccionada>/CustomerID}" />
+
+                        <Label text="{i18n>detailLabelEmployeeID}" />
+                        <Text text="{ordenSeleccionada>/EmployeeID}" />
+
+                        <Label text="{i18n>detailLabelOrderDate}" />
+                        <Text  text="{ordenSeleccionada>/OrderDate}" />
+                        
+                        <Label text="{i18n>detailLabelAddress}" />
+                        <Text text="{ordenSeleccionada>/ShipAddress}" />
+
+                        <Label text="{i18n>detailLabelCity}" />
+                        <Text text="{ordenSeleccionada>/ShipCity}" />
+
+                        <Label text="{i18n>detailLabelCountry}" />
+                        <Text text="{ordenSeleccionada>/ShipCountry}" />
+
+                        <Label text="{i18n>detailLabelName}" />
+                        <Text text="{ordenSeleccionada>/ShipName}" />
+
+                        <Label text="{i18n>detailLabelCode}" />
+                        <Text text="{ordenSeleccionada>/ShipPostalCode}" />
+                    </f:content>
+		        </f:SimpleForm>
+            </content>
+	</Page>
+	
+                    
+</mvc:View>

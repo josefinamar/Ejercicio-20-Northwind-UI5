@@ -1,0 +1,56 @@
+<mvc:View controllerName="Ejercicio20.Ejercicio20.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	
+	<Page id="page" title="{i18n>title}">
+		<content>
+         
+           <Table id="idTableProductos" mode="SingleSelectMaster" items="{modeloOrdenes>/value}" itemPress=".onTableItemPress">
+            <headerToolbar>
+                    <OverflowToolbar width="100%">
+                        <content>
+                            <Title text="Order Details" level="H2"/>
+                        </content>
+                    </OverflowToolbar>
+            </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="{i18n>tableDiscount}"></Text>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>tableOrderId}"></Text>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>tableProductId}"></Text>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>tableQuantity}"></Text>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>tableUnitPrice}"></Text>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Active">
+                        <cells>
+                            <ObjectNumber number="{modeloOrdenes>Discount}" />
+                        </cells>
+                        <cells>
+                            <ObjectNumber number="{modeloOrdenes>OrderID}" />
+                        </cells>
+                        <cells>
+                            <ObjectNumber number="{modeloOrdenes>ProductID}" />
+                        </cells>
+                        <cells>
+                            <ObjectNumber number="{modeloOrdenes>Quantity}" />
+                        </cells>
+                        <cells>
+                            <Text text="{modeloOrdenes>UnitPrice}"></Text>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        
+        
+        </content>
+	</Page>
+
+</mvc:View>
